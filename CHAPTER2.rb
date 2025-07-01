@@ -32,12 +32,14 @@
  puts obj.c2f(100)
 
   #METHOD WITHOUT PARENTHESES
+greeter = Object.new
    def greeter.goodbye name
    puts "Goodbye, #{name}."
    end
    greeter.goodbye "Swetha"
 
   #RETURNING A VALUE
+math = Object.new
     def math.square(n)
     n*n
     end
@@ -89,6 +91,13 @@ def ticket.availability_status
 end
 
 #USING BOOLEAN METHOD IN CONDITIONAL
+class Ticket
+  def available?
+    true  # or some logic that determines availability
+  end
+end
+
+ticket = Ticket.new
 if ticket.available?
   puts "You're in luck!"
 else
